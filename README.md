@@ -17,6 +17,17 @@
  
 # Some images of the project :camera: 
 
-![image](Geolocation/media/screenshot/1.png)
+![image](media/screenshot/1.png)
 
 #
+
+![image](media/screenshot/2.png)
+
+## if you enter a wrong IP address or string values it will show an error.
+#
+
+![image](media/screenshot/3.png)
+
+#
+
+![image](media/screenshot/4.png)
