@@ -1,0 +1,153 @@
+body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-img{
+    background-image: url(../img/pattern-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 30px 30px;
+    
+}
+
+
+#map {
+    width: 100%;
+    z-index: 0;
+    flex: 1;
+    text-align: center;
+    padding:  30px;
+    padding-top: 150px;
+    position: relative;
+  }
+
+.Title{
+    color: #fff;
+    text-align: center;
+}
+
+.form{
+    text-align: center;
+}
+
+.input{
+    width: 27rem;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    
+}
+.btn{
+    background-color:#222;
+    padding: 13px 20px;
+    border-radius: 10px;
+    border:5px;
+    color: #fff;
+    
+}
+
+.box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #fff;
+    /* max-width: 960px;  */
+    max-width: 78%;
+    margin: 40px auto;
+    border-radius: 15px;
+    padding: 30px 0px;
+    box-shadow: 0 1px 10px 0 rgba(32,33,36,0.5);
+    position: relative;
+    margin-bottom: -120px;
+    z-index: 1;
+}
+
+.box__item{
+    text-align: center;
+    padding: 0px 30px;
+}
+
+
+.box__item:nth-child(1n){
+    border-left:3px solid #f0f0f0;
+}
+
+.box__item:first-child{
+    border-left:0px ;
+}
+
+.box__item ul li:first-child{
+    color:rgb(138, 138, 138);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: .7rem;    
+}
+
+ul li{
+    list-style-type:none;
+    padding: 3px;
+    text-align: center;
+}
+
+
+
+.footer{
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer a {
+    color: teal;
+  }
+
+
+.error-ip{
+    display: none;
+    color: #f0f0f0;
+    background-color: #E91E63;
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-size: 10px;
+    margin: .4em;
+  }
+
+
+/*https://icons8.com/preloaders/*/
+@media (max-width:900px){
+    .box{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: -150px;
+        padding: 12px 0;
+        max-width: 100%;
+        
+    }
+
+    .box__item{
+        text-align: center;
+        padding:12px 30px;
+    }
+    .box__item ul li:first-child{
+      font-size: 12px;
+      padding-bottom:2px ;
+      
+    }
+      
+    #mapa{
+        padding: 150px 30px;
+    }
+    .footer{
+      font-size: 16px;
+    }
+    
+    li.title-h6.bold-500 {
+        font-size: 19px;
+    }
+    h1.title-h3.bold-400.padding-bottom-20{
+        font-size: 24px;
+    }
+}
