@@ -11,6 +11,7 @@
  # ⚡ Used Technologies
 - Python
 - Django and Django rest-framework
+- CSS
 - Bootstrap 4 
 - API Geolocation [This API](https://ip-api.com/docs/api:json)
 - API to display the map *API Google Map* with Google Cloud Platform
