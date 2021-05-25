@@ -19,12 +19,12 @@ from Geolocation.settings.base import get_secret
 @renderer_classes([TemplateHTMLRenderer,JSONRenderer]) 
 def get_ip_tracker(request):
     ip_address = request.GET.get('IP','')
-    fields= "status,query,country,timezone,lat,lon,isp"
+    fields = "status,query,country,timezone,lat,lon,isp"
     api_url = requests.get(f'http://ip-api.com/json/{ip_address}?fields={fields}') 
-    api_key= get_secret('API_KEY')
+    api_key = get_secret('API_KEY')
     data = json.loads(api_url.content)
-    data['api_key']= api_key
-    status= data.get('status')
+    data['api_key'] = api_key
+    status = data.get('status')
     if status == "fail":
         messages.error(request,'You have entered an invalid IP address!')
         return HttpResponseRedirect(reverse('ip_app:ip_tracker'))
@@ -36,11 +36,11 @@ def get_ip_tracker(request):
 #     def get(self,request,*args,**kwargs):
     
 #         ip_address = request.GET.get('IP','')
-#         fields= "status,query,country,timezone,lat,lon,isp"
+#         fields = "status,query,country,timezone,lat,lon,isp"
 #         api_url = requests.get(f'http://ip-api.com/json/{ip_address}?fields={fields}') 
-#         api_key= get_secret('API_KEY')
+#         api_key = get_secret('API_KEY')
 #         geodata = json.loads(api_url.content)
-#         geodata['api_key']= api_key
+#         geodata['api_key'] = api_key
 #         status= geodata.get('status')
 #         if status == "fail":
 #             messages.error(request,'You have entered an invalid IP address!')
