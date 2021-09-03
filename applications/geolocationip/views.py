@@ -14,7 +14,6 @@ from django.contrib import messages
 
 from Geolocation.settings.base import get_secret
 
-
 @api_view(['GET'])
 @renderer_classes([TemplateHTMLRenderer,JSONRenderer]) 
 def get_ip_tracker(request):
@@ -32,9 +31,7 @@ def get_ip_tracker(request):
 
 
 # class GetIpTracker(View):
-
 #     def get(self,request,*args,**kwargs):
-    
 #         ip_address = request.GET.get('IP','')
 #         fields = "status,query,country,timezone,lat,lon,isp"
 #         api_url = requests.get(f'http://ip-api.com/json/{ip_address}?fields={fields}') 
@@ -46,5 +43,3 @@ def get_ip_tracker(request):
 #             messages.error(request,'You have entered an invalid IP address!')
 #             return HttpResponseRedirect(reverse('ip_app:home'))
 #         return render(request,'geolocationip/home.html',geodata)
-
-
